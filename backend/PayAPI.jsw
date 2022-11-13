@@ -1,0 +1,10 @@
+// allows for payment transactions
+
+import wixPay from 'wix-pay-backend';
+
+export function createPaymentForProduct() {
+    return wixPay.createPayment({
+        items: [(name: 'Tomato Seeds', price: 3.00, quantitiy: 1)],
+        amount: 1
+    });
+}
